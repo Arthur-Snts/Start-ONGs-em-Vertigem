@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pagina_download.css') }}">
+
+    <style>
+        html, body {
+            background-image: url("{{ url_for('static', filename='images/bg-image.png') }}");
+        }
+
+        /* Estilos para o botão */
+        .baixar button {
+            display: flex;
+            flex-direction: column; /* Coloca ícone e texto em coluna */
+            align-items: center; /* Centraliza o conteúdo */
+            padding: 15px 30px; /* Define o padding do botão */
+            font-size: 14px; /* Tamanho da fonte do texto */
+            text-align: center; /* Centraliza o texto */
+            width: 200px; /* Define uma largura fixa */
+        }
+
+        .baixar button svg {
+            width: 32px; /* Define um tamanho fixo para o ícone */
+            height: 32px; /* Define um tamanho fixo para o ícone */
+            margin-bottom: 5px; /* Espaçamento abaixo do ícone */
+        }
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('logout') }}" class="btn btn-primary rounded-circle position-fixed d-flex align-items-center" style="bottom: 20px; right: 20px; width: 50px; height: 50px; display: flex; justify-content: center;" title="Sair">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+        </svg>
+    </a>
+    <span class="position-fixed" style="bottom: 30px; right: 80px; font-size: 16px; color: #007bff; font-weight: bold;" title="Sair">
+        Sair
+    </span>
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>START! - ONGS EM VERTIGEM</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{url_for('infoprojeto')}}">Página do projeto</a></li>
+                <li><a href="{{url_for('infogame')}}">Página do jogo</a></li>
+                <li><a href="{{url_for('download')}}">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="form">
+        <form class="baixar">
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                </svg>
+                Baixar Demo do jogo
+            </button>
+        </form>
+    </div>
+     
+</body>
+</html>

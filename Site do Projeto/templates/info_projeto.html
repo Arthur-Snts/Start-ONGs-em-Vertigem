@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pagina_info.css')}}">
+
+    <style>
+        html, body {
+            background-image: url("{{url_for('static', filename='images/bg-image.png')}}");
+        }
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('logout') }}" class="btn btn-primary rounded-circle position-fixed d-flex align-items-center" style="bottom: 20px; right: 20px; width: 50px; height: 50px; display: flex; justify-content: center;" title="Sair">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+        </svg>
+    </a>
+    <span class="position-fixed" style="bottom: 30px; right: 80px; font-size: 16px; color: #007bff; font-weight: bold;" title="Sair">
+        Sair
+    </span>
+    
+    <header class="main-header">
+        <div class="logo">
+            <h1>START! - ONGS EM VERTIGEM - Área do Projeto</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{url_for('infoprojeto')}}">Página do projeto</a></li>
+                <li><a href="{{url_for('infogame')}}">Página do jogo</a></li>
+                <li><a href="{{url_for('download')}}">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="card">
+        <div class="titulo">
+            <h1>Projeto e Autores</h1>
+        </div>
+        <div class="conteudo">
+                <h4>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO RIO GRANDE DO NORTE – IFRN – CAMPUS CAICÓ</h4>
+            <h6> 
+                START! - ONGS EM VERTIGEM
+            </h6>
+            <h6>
+                Autores: Arthur Alves dos Santos, Artur Dantas de Medeiros, Júlio César Tavares da Silva, Victor Lucas de Araújo Dessoles, Vitor Emanuel de Medeiros Amaral
+            </h6>
+            <h6>
+                Ano: 2024
+            </h6>
+        </div>
+    </div>
+    <div class="card">
+        <div class="titulo">
+            <h1>Resumo do Projeto</h1>
+        </div>
+        <div class="conteudo">
+            <img src="{{url_for('static', filename='images/game-example.gif')}}" alt="imagem">
+            <h6>
+                O projeto "START! - ONGS EM VERTIGEM" visa abordar a interação entre organizações não governamentais (ONGs) e a comunidade, focando na criação de um espaço colaborativo que promova a troca de experiências e conhecimentos.
+            </h6>
+            <h6>
+                O projeto é desenvolvido por um grupo de alunos do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte (IFRN) – Campus Caicó, e busca estimular o engajamento social, a capacitação e a mobilização da comunidade local.
+            </h6>
+            <h6>
+                Através de atividades práticas, palestras e workshops, a equipe pretende conscientizar a população sobre a importância das ONGs e seu papel fundamental na promoção de mudanças sociais. 
+            </h6>
+            <h6>
+                O projeto também envolve a realização de um mapeamento das ONGs existentes na região, identificando suas principais demandas e desafios, para que possamos estabelecer parcerias efetivas e ações direcionadas.
+            </h6>
+            <h6>
+                Esperamos que "START!" seja um catalisador de ações positivas e que inspire outros estudantes e membros da comunidade a se envolverem em iniciativas semelhantes, fortalecendo assim a rede de apoio e solidariedade em nosso município.
+            </h6>
+        </div>
+    </div>
+    <div class="card">
+        <div class="titulo">
+            <h1>Objetivos Principais</h1>
+        </div>
+        <div class="conteudo">
+            <ul>
+                <li>Desenvolver um jogo eletrônico que engaje o público e aumente a visibilidade das ONGs ambientais no Brasil.</li>
+                <br>
+                <li>Proporcionar uma melhor compreensão das atividades das ONGs e seus impactos no meio ambiente.</li>
+                <br>
+                <li>Facilitar a interação entre jogadores e causas ambientais, incentivando a participação em ações voluntárias.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="titulo">
+            <h1>Metodologia</h1>
+        </div>
+        <div class="conteudo">
+            <h5>O projeto abrange pesquisa inicial sobre ONGs, design de jogo com elementos gráficos e narrativos, testes com o público-alvo, ajustes baseados em feedback, e monitoramento de impacto após o lançamento do jogo.</h5>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="titulo">
+            <h1>Resultados Esperados</h1>
+        </div>
+        <div class="conteudo">
+            <ul>
+                <li>Maior conscientização sobre questões ambientais e as ações das ONGs.</li>
+                <br>
+                <li> Aumento do interesse em atividades voluntárias.</li>
+                <br>
+                <li>Desenvolvimento de habilidades de resolução de problemas ambientais.</li>
+                <br>
+                <li>Maior engajamento do público, especialmente jovens, com causas ambientais.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS databasePI;
+USE databasePI;
+
+CREATE TABLE tb_usuario (
+usu_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+usu_nome TEXT NOT NULL,
+usu_email TEXT NOT NULL,
+usu_senha TEXT NOT NULL
+);

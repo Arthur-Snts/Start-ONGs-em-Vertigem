@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pagina_acesso.css')}}">
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+          <form class="login-form" action="{{url_for('register')}}" method="post">
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <input type="text" placeholder="Nome de usuário" name="nome" required>
+            <input type="email" placeholder="Seu e-mail" name="email" required>
+
+            <input type="password" placeholder="Sua senha" name="senha" required>
+            <input type="password" placeholder="Confirme sua senha" name="senha_conf" required>
+
+            <button type="submit">Cadastrar</button>
+            <p class="message">Já possui uma conta? <a href="{{url_for('login')}}">Voltar</a></p>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

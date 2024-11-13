@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pagina_info.css')}}">
+
+    <style>
+        html, body {
+            background-image: url("{{url_for('static', filename='images/bg-image.png')}}");
+        }
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('logout') }}" class="btn btn-primary rounded-circle position-fixed d-flex align-items-center" style="bottom: 20px; right: 20px; width: 50px; height: 50px; display: flex; justify-content: center;" title="Sair">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+        </svg>
+    </a>
+    <span class="position-fixed" style="bottom: 30px; right: 80px; font-size: 16px; color: #007bff; font-weight: bold;" title="Sair">
+        Sair
+    </span>
+
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>START! - ONGS EM VERTIGEM - Área do jogo</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{url_for('infoprojeto')}}">Página do projeto</a></li>
+                <li><a href="{{url_for('infogame')}}">Página do jogo</a></li>
+                <li><a href="{{url_for('download')}}">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="card">
+        <div class="titulo">
+            <h1>titulo</h1>
+        </div>
+        <div class="conteudo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="titulo">
+            <h1>titulo</h1>
+        </div>
+        <div class="conteudo">
+            <img src="pesonagem.jpeg" alt="imagem">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="titulo">
+            <h1>titulo</h1>
+        </div>
+        <div class="conteudo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel vitae eos, minus dolor voluptates, mollitia temporibus amet dolorem non officiis magnam velit sed sint cupiditate quo incidunt placeat aliquam!</p>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -9,7 +9,7 @@
 <body>
     <div class="login-page">
         <div class="form">
-          <form class="login-form" action="{{url_for('register')}}" method="post">
+          <form class="login-form" action="{{url_for('main.register')}}" method="post">
 
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
@@ -30,7 +30,7 @@
             <input type="password" placeholder="Confirme sua senha" name="senha_conf" required>
 
             <button type="submit">Cadastrar</button>
-            <p class="message">Já possui uma conta? <a href="{{url_for('login')}}">Voltar</a></p>
+            <p class="message">Já possui uma conta? <a href="{{url_for('main.login')}}">Voltar</a></p>
           </form>
         </div>
       </div>

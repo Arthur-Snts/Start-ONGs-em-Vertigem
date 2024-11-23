@@ -9,7 +9,7 @@
 <body>
     <div class="login-page">
         <div class="form">
-          <form class="login-form" action="{{url_for('login')}}" method="post">
+          <form class="login-form" action="{{url_for('main.login')}}" method="post">
 
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
@@ -28,7 +28,7 @@
 
             <button>login</button>
 
-            <p class="message">Não possui uma conta? <a href="{{url_for('register')}}">Criar conta</a></p>
+            <p class="message">Não possui uma conta? <a href="{{url_for('main.register')}}">Criar conta</a></p>
           </form>
         </div>
       </div>

@@ -1,6 +1,6 @@
 from database import db
 from sqlalchemy.orm import mapped_column, Mapped
-from sqlalchemy import Integer, String
+from sqlalchemy import Integer, Text
 from flask_login import UserMixin
 
 class User(db.Model, UserMixin):
@@ -8,9 +8,9 @@ class User(db.Model, UserMixin):
 
     # Mapeando os atributos para os nomes de colunas na tabela
     id: Mapped[int] = mapped_column('usu_id', Integer, primary_key=True)
-    nome: Mapped[str] = mapped_column('usu_nome', String(50), nullable=False)
-    email: Mapped[str] = mapped_column('usu_email', String(120), unique=True, nullable=False)
-    senha: Mapped[str] = mapped_column('usu_senha', String(100), nullable=False)
+    nome: Mapped[str] = mapped_column('usu_nome', Text, nullable=False)
+    email: Mapped[str] = mapped_column('usu_email', Text, unique=True, nullable=False)
+    senha: Mapped[str] = mapped_column('usu_senha', Text, nullable=False)
 
     def __init__(self, nome, email, senha):
         self.nome = nome
